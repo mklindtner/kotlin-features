@@ -32,7 +32,7 @@ printFoo(D()) //prints c
 
 
 ### member function
-normally added behavior to the class.
+normally added behavior to the class. These take priority over extension functions
 
 
 ### data class we will derive examples from
