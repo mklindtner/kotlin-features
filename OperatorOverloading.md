@@ -20,18 +20,7 @@ Are resolved statically for a class afterwards. Meaning that behavior is not add
 normally added behavior to the class.
 
 
-
-## Unary operators
-unary is operators who performs a single operation they can be used to define singular behavior within a class.
-
-### notOperator()
-how NOT to do it (huehue)
-```kotlin 
-operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
-
-```
-
-### data class/member function
+### data class we will derive examples from
 ```kotlin
 class Square(val length: Int, val width: Int) {
     var area = length * width
@@ -42,6 +31,16 @@ class Square(val length: Int, val width: Int) {
         return Square(other.length + this.length, this.width + other.width)
     }
 }
+
+```
+
+## Unary operators
+unary is operators who performs a single operation they can be used to define singular behavior within a class.
+
+### notOperator()
+how NOT to do it (huehue)
+```kotlin 
+operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
 
 ```
 
