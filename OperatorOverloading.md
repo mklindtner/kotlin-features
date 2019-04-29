@@ -18,12 +18,14 @@ unary is operators who performs a single operation.
 
 ### notOperator()
 //NOT how to do it
-``` operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
+```kotlin 
+operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
 
 ```
 
 ### data class/member function
-``` class Square(val length: Int, val width: Int) {
+```kotlin
+class Square(val length: Int, val width: Int) {
     var area = length * width
 
     unaryPlus()
