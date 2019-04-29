@@ -1,9 +1,9 @@
 # Kotlin infix/suffix Operators
 
 ## Introduction
-operator overloading is when we decide to override common expressions (+, -, !) 
+operator overloading is when we decide to override common expressions (+, -, !, *) 
 in practice this is rarely done, but can be very useful especially within domain specific languages.
-We can percieve it as extending the capabilities of kotlin. 
+We can percieve it as extending the capabilities of a specific kotlin class. 
 
 
 ## Operators General
@@ -11,9 +11,18 @@ has fixed symbolic presence and precedence remains fixed.
 To overload an operator we must use a member or extension function.
 
 
+### Extension Function
+Are resolved statically for a class afterwards. Meaning that behavior is not added to the class but simply added dot-notation to the class, this means that a reference will not influence the original behavior should we choose to override. 
+//show example
+
+
+### member function
+normally added behavior to the class.
+
+
 
 ## Unary operators
-unary is operators who performs a single operation.
+unary is operators who performs a single operation they can be used to define singular behavior within a class.
 
 ### notOperator()
 how NOT to do it (huehue)
