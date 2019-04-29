@@ -72,7 +72,8 @@ operator fun Square.contains(a: Int) = Square(length, width).area <= a
 
 ## infix operators
 infix operators has lower precedence than arithmetic operators, type casts and the rangeTo operator
-``` infix fun Square.neg(x: Int): Int {
+```Kotlin
+infix fun Square.neg(x: Int): Int {
     return -(this.length) + x
 }
 
