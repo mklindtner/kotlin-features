@@ -18,7 +18,7 @@ unary is operators who performs a single operation.
 
 ### notOperator()
 //NOT how to do it
-```operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
+``` operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
 
 ```
 
@@ -53,13 +53,13 @@ Examples of typical operators
 
 
 ### multiply
-```operator fun Square.times(b: Int) = Square(length *b, width*b)
+``` operator fun Square.times(b: Int) = Square(length *b, width*b)
 
 ```
 
 
 ### in operator (compareTo)
-```operator fun Square.contains(a: Int) = Square(length, width).area <= a
+``` operator fun Square.contains(a: Int) = Square(length, width).area <= a
 
 
 ```
@@ -68,7 +68,7 @@ Examples of typical operators
 
 ## infix operators
 infix operators has lower precedence than arithmetic operators, type casts and the rangeTo operator
-```infix fun Square.neg(x: Int): Int {
+``` infix fun Square.neg(x: Int): Int {
     return -(this.length) + x
 }
 
