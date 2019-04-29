@@ -13,7 +13,7 @@ To overload an operator we must use a member or extension function.
 
 ### Extension Function
 Are resolved statically for a class afterwards. Meaning that behavior is not added to the class but simply added dot-notation to the class, this means that a reference will not influence the original behavior should we choose to override. 
-//show example
+example
 ``` Kotlin
 open class C
 
