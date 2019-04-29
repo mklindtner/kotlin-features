@@ -27,7 +27,7 @@ fun printFoo(c: C) {
     println(c.foo())
 }
 
-printFoo(D())
+printFoo(D()) //prints c
 ```
 
 
