@@ -12,12 +12,11 @@ To overload an operator we must use a member or extension function.
 
 
 
-
 ## Unary operators
 unary is operators who performs a single operation.
 
 ### notOperator()
-//NOT how to do it
+how NOT to do it (huehue)
 ```kotlin 
 operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
 
@@ -39,7 +38,8 @@ class Square(val length: Int, val width: Int) {
 
 ### unaryMinus()
 example: we want to draw a square on a 2D-graph and need to the opposite coordinates (or just black holes ... )
-```operator fun Square.unaryMinus() = Square(-length, -width)
+```Kotlin
+operator fun Square.unaryMinus() = Square(-length, -width)
 
 ```
 
@@ -55,13 +55,15 @@ Examples of typical operators
 
 
 ### multiply
-``` operator fun Square.times(b: Int) = Square(length *b, width*b)
+```Kotlin 
+operator fun Square.times(b: Int) = Square(length *b, width*b)
 
 ```
 
 
 ### in operator (compareTo)
-``` operator fun Square.contains(a: Int) = Square(length, width).area <= a
+```Kotlin
+operator fun Square.contains(a: Int) = Square(length, width).area <= a
 
 
 ```
