@@ -37,13 +37,13 @@ normally added behavior to the class. These take priority over extension functio
 
 ### data class we will derive examples from
 ```kotlin
-class Square(val length: Int, val width: Int) {
+class Vektor(val length: Int, val width: Int) {
     var area = length * width
 
     unaryPlus()
     //member function    
-    operator fun plus(other: Square ): Square {
-        return Square(other.length + this.length, this.width + other.width)
+    operator fun plus(other: Vektor ): Vektor {
+        return Vektor(other.length + this.length, this.width + other.width)
     }
 }
 
@@ -55,14 +55,14 @@ unary is operators who performs a single operation they can be used to define si
 ### notOperator()
 how NOT to do it (huehue)
 ```kotlin 
-operator fun Square.not() = Square((length*length) * -1, (width*width) * -1)
+operator fun Vektor.not() = Vektor((length*length) * -1, (width*width) * -1)
 
 ```
 
 ### unaryMinus()
-example: we want to draw a square on a 2D-graph and need to the opposite coordinates (or just black holes ... )
+example: we want to draw a vektor on a 2D-graph and need to the opposite coordinates (or just black holes ... )
 ```Kotlin
-operator fun Square.unaryMinus() = Square(-length, -width)
+operator fun Vektor.unaryMinus() = Vektor(-length, -width)
 
 ```
 
@@ -79,14 +79,14 @@ Examples of typical operators
 
 ### multiply
 ```Kotlin 
-operator fun Square.times(b: Int) = Square(length *b, width*b)
+operator fun Vektor.times(b: Int) = Vektor(length *b, width*b)
 
 ```
 
 
 ### in operator (compareTo)
 ```Kotlin
-operator fun Square.contains(a: Int) = Square(length, width).area <= a
+operator fun Vektor.contains(a: Int) = Vektor(length, width).area <= a
 
 
 ```
@@ -96,11 +96,11 @@ operator fun Square.contains(a: Int) = Square(length, width).area <= a
 ## infix operators
 infix operators has lower precedence than arithmetic operators, type casts and the rangeTo operator
 ```Kotlin
-infix fun Square.neg(x: Int): Int {
+infix fun Vektor.neg(x: Int): Int {
     return -(this.length) + x
 }
 
-infix fun Int.Square(x: Square): Int {
+infix fun Int.Vektor(x: Vektor): Int {
     return this + x.length + x.width
 }
 ```
@@ -108,14 +108,14 @@ infix fun Int.Square(x: Square): Int {
 ## Examples
 ``` Kotlin
 fun main(args: Array<String>) {
-    val square = Square(5, 10)
-    val square2 = Square(5, 10)
-    println(-square) //Square(-5,-10)
-    println(!square) //Square(-25, -100)
-    println(square.times(2)) //Square(10, 20)
-    println(square.contains(25)) // false
-    println(square.plus(square2)) //Square(10, 20)
-    println(square.neg(3)) //-2
-    println(10.Square(square)) //25 
+    val vektor = Vektor(5, 10)
+    val vektor2 = Vektor(5, 10)
+    println(-vektor) //Vektor(-5,-10)
+    println(!vektor) //Vektor(-25, -100)
+    println(vektor.times(2)) //Vektor(10, 20)
+    println(vektor.contains(25)) // false
+    println(vektor.plus(vektor2)) //Vektor(10, 20)
+    println(vektor.neg(3)) //-2
+    println(10.Vektor(vektor)) //25 
 }
 ```
