@@ -32,7 +32,7 @@ printFoo(D()) //prints c
 
 
 ### member function
-normally added behavior to the class.
+normally added behavior to the class. These take priority over extension functions
 
 
 ### data class we will derive examples from
@@ -105,3 +105,17 @@ infix fun Int.Square(x: Square): Int {
 }
 ```
 
+## Examples
+``` Kotlin
+fun main(args: Array<String>) {
+    val square = Square(5, 10)
+    val square2 = Square(5, 10)
+    println(-square) //Square(-5,-10)
+    println(!square) //Square(-25, -100)
+    println(square.times(2)) //Square(10, 20)
+    println(square.contains(25)) // false
+    println(square.plus(square2)) //Square(10, 20)
+    println(square.neg(3)) //-2
+    println(10.Square(square)) //25 
+}
+```
