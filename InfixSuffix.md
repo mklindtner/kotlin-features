@@ -112,10 +112,10 @@ fun main(args: Array<String>) {
     val vektor2 = Vektor(5, 10)
     println(-vektor) //Vektor(-5,-10)
     println(!vektor) //Vektor(-25, -100)
-    println(vektor.times(2)) //Vektor(10, 20)
-    println(vektor.contains(25)) // false
-    println(vektor.plus(vektor2)) //Vektor(10, 20)
-    println(vektor.neg(3)) //-2
+    println(vektor * 2) //Vektor(10, 20)
+    println(vektor in 25) // false
+    println(vektor + vektor2) //Vektor(10, 20)
+    println(vektor - 3) //-2
     println(10.Vektor(vektor)) //25 
 }
 ```
